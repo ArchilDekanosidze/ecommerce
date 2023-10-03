@@ -12,7 +12,7 @@ return [
     | location for this type of information, allowing packages to have
     | a conventional file to locate the various service credentials.
     |
-    */
+     */
 
     'mailgun' => [
         'domain' => env('MAILGUN_DOMAIN'),
@@ -29,24 +29,28 @@ return [
         'secret' => env('AWS_SECRET_ACCESS_KEY'),
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
-    
+
     'google' => [
-		'client_id' => '578845897426-tit65unv1agqp663viutabqa6q1oltk2.apps.googleusercontent.com',
-		'client_secret' => 'Q-97bU7pogS_EOsUo_jmGfG-',
-		'redirect' => 'http://localhost/pro3/ecommerce/callback/google',
-	], 
-  
-    'sms' => [
-        'auth' => [
-            'uname' => env('SMS_uname'),
-            'pass' => env('SMS_pass'),
-            'from' => env('SMS_from'),
-        ],
-        'patterns' => [
-            'verification' => 'e9ssnpjkcqbtjlt',
-        ],
-        'baseUri' => env('SMS_uri'),
+        'client_id' => '578845897426-tit65unv1agqp663viutabqa6q1oltk2.apps.googleusercontent.com',
+        'client_secret' => 'Q-97bU7pogS_EOsUo_jmGfG-',
+        'redirect' => 'http://localhost/pro3/ecommerce/callback/google',
     ],
 
+    'smsFaraz' => [
+        'auth' => [
+            'uname' => env('SMS_Faraz_uname'),
+            'pass' => env('SMS_Faraz_pass'),
+            'from' => env('SMS_from'),
+        ],
+        'baseUri' => "https://ippanel.com/patterns/pattern?username=",
+    ],
+
+    'smsMeliPayamak' => [
+        'auth' => [
+            'uname' => env('SMS_MeliPayamak_uname'),
+            'pass' => env('SMS_MeliPayamak_pass'),
+        ],
+        'url' => "https://rest.payamak-panel.com/api/SendSMS/BaseServiceNumber",
+    ],
 
 ];
